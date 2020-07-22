@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -9,200 +9,205 @@
 <body class="page__body">
 
   <header class="page-header page-header__wrapper">
-    <nav class="page-header__main-nav">
-      <button aria-label="закрыть меню" class="main-nav__close-button" type="button">
-        <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
-            fill="white" />
-        </svg>
-      </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__link main-nav__link--active">
-          <a>
-            Главная
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="photo.html">
-            Фото и видео
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="form.html">
-            Форма отзыва
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#">
-            HTML Academy
-          </a>
-        </li>
-      </ul>
-      <button aria-label="открыть меню" class="main-nav__toggle" type="button">
-        <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
-          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
-          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
-        </svg>
 
-      </button>
+    <button class="page-header__close-button page-header__close-button--active" type="button">
+      закрыть меню
+      <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
+          fill="white" />
+      </svg>
+    </button>
+
+    <nav class="page-header__menu">
+      <a class="page-header__link page-header__link--active">
+        Главная
+      </a>
+
+      <a class="page-header__link page-header__link--active" href="photo.html">
+        Фото и видео
+      </a>
+
+      <a class="page-header__link page-header__link--active" href="form.html">
+        Форма отзыва
+      </a>
+
+      <a class="page-header__link page-header__link--active" href="#">
+        HTML Academy
+      </a>
     </nav>
+
+    <button class="page-header__toggle" type="button">
+      <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
+        <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
+        <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
+      </svg>
+      открыть меню
+    </button>
+
     <a class="page-header__logo">
+      логотип сайта Седона
       <img src="https://via.placeholder.com/102x84" alt="Логотип">
     </a>
+
   </header>
 
   <main class="page-main">
+
     <section class="main-intro">
-      <h1 class="visually-hidden">
-        Седона
-      </h1>
-      <div class="intro-image">
-        <h2 class="intro-image__title">Sedona</h2>
-      </div>
-      <h3 class="main-intro__title">
+
+      <h1 class="main-intro__title">
         Оставьте свой отзыв
-      </h3>
+      </h1>
+
       <p class="main-intro__description">
         Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
       </p>
     </section>
 
-    <section class="main-form">
-      <div class="main-form__wrapper">
+    <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
 
-        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="filter-form__item form-name">
-            <legend>
-              Представьтесь:
-            </legend>
-            <div class="form-name__item">
-              <label for="user-name">
-                Имя*:
-              </label>
-              <input class="form-name__input" id="user-name" type="text" name="name" required placeholder="Петр">
-            </div>
-            <div class="form-name__item">
-              <label for="user-surname">
-                Фамилия*:
-              </label>
-              <input class="form-name__input" id="user-surname" type="text" name="surname" required
-                placeholder="Иванов">
-            </div>
-            <div class="form-name__item">
-              <label for="user-patronymic">
-                Отчество:
-              </label>
-              <input class="form-name__input" id="user-patronymic" type="text" name="patronymic"
-                placeholder="Александрович">
-            </div>
-          </div>
+      <section class="filter-form__item form-name">
+        <h3 class="form-name__title">
+          Представьтесь:
+        </h3>
 
-          <div class="filter-form__item form-contacts">
-            <legend>
-              Контактная информация:
-            </legend>
-            <div class="form-contacts__item">
-              <label for="user-tel">
-                Контактный телефон*:
-              </label>
-              <input class="form-contacts__input" id="appointment-tel" type="text" name="phone" required
-                placeholder="Введите телефон">
-            </div>
-            <div class="form-contacts__item">
-              <label for="appointment-email">
-                Электронная почта*:
-              </label>
-              <input class="form-contacts__input" id="appointment-email" type="text" name="email" required
-                placeholder="Введите e-mail">
-            </div>
-          </div>
 
-          <div class="filter-form__item form-impression">
-            <legend>
-              Ваше общее впечатление:
-            </legend>
-            <ul class="form-impression__list">
-              <li class="form-impression__item filter-radio">
-                <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="positive"
-                  id="filter-positive" checked>
-                <label for="filter-positive">
-                  Скорее положительное
-                </label>
-              </li>
-              <li class="form-impression__item filter-radio">
-                <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="negative"
-                  id="filter-negative">
-                <label for="filter-negative">
-                  Скорее отрицательное
-                </label>
-              </li>
-              <li class="form-impression__item filter-radio">
-                <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="unknown"
-                  id="filter-unknown">
-                <label for="filter-unknown">
-                  Затрудняюсь ответить
-                </label>
-              </li>
-            </ul>
-          </div>
+        <label class="form-name__user-name">
+          Имя*:
+          <input class="form-name__input" id="user-name" type="text" name="name" required placeholder="Петр">
+        </label>
 
-          <div class="filter-form__item form-attractions">
-            <legend>
-              Посещенные достопримечательности:
-            </legend>
-            <ul class="form-attractions__list">
-              <li class="form-attractions__item filter-checkbox">
-                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="devil's-bridge"
-                  id="filter-devil's-bridge" checked>
-                <label for="filter-devil's-bridge">
-                  Мост Дьявола
-                </label>
-              </li>
-              <li class="form-attractions__item filter-checkbox">
-                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="bell-mountain"
-                  id="filter-bell-mountain" checked>
-                <label for="filter-bell-mountain">
-                  Гора-Колокол
-                </label>
-              </li>
-              <li class="form-attractions__item filter-checkbox">
-                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="slide-park"
-                  id="filter-slide-park" checked>
-                <label for="filter-slide-park">
-                  Слайд-парк
-                </label>
-              </li>
-              <li class="form-attractions__item filter-checkbox">
-                <input class="visually-hidden filter-checkbox__input" type="checkbox" name="red-rocks"
-                  id="filter-red-rocks">
-                <label for="filter-red-rocks">
-                  Красные скалы
-                </label>
-              </li>
-            </ul>
-          </div>
+        <label class="form-name__user-name">
+          Фамилия*:
+          <input class="form-name__input" id="user-surname" type="text" name="surname" required placeholder="Иванов">
+        </label>
 
-          <div class="filter-form__item form-emotions">
-            <legend>
-              Опишите свои эмоции:
-            </legend>
-            <div class="form-emotions__item">
-              <input class="form-emotions__input" type="text" name="emotions"
-                placeholder="Опишите подробно все свои восторги">
-            </div>
-          </div>
+        <label class="form-name__user-name">
+          Отчество:
+          <input class="form-name__input" id="user-patronymic" type="text" name="patronymic"
+            placeholder="Александрович">
+        </label>
 
-          <button class="main-button main-button--active" type="submit">
-            <span>
-              Отправить отзыв
-            </span>
-          </button>
+      </section>
 
-        </form>
-      </div>
-    </section>
+      <section class="filter-form__item form-contacts">
+
+        <h3 class="form-contacts_title">
+          Контактная информация:
+        </h3>
+
+        <label class="form-contacts__item">
+          Контактный телефон*:
+          <input class="form-contacts__input" id="appointment-tel" type="text" name="phone" required
+            placeholder="Введите телефон">
+        </label>
+
+        <label class="form-contacts__item">
+          Электронная почта*:
+          <input class="form-contacts__input" id="appointment-email" type="text" name="email" required
+            placeholder="Введите e-mail">
+        </label>
+
+      </section>
+
+      <section class="filter-form__item form-expression">
+
+        <h3 class="form-expression__title">
+          Ваше общее впечатление:
+        </h3>
+
+        <ul class="form-impression__list">
+
+          <li class="form-impression__item filter-radio">
+            <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="positive"
+              id="filter-positive" checked>
+            <label for="filter-positive">
+              Скорее положительное
+            </label>
+          </li>
+
+          <li class="form-impression__item filter-radio">
+            <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="negative"
+              id="filter-negative">
+            <label for="filter-negative">
+              Скорее отрицательное
+            </label>
+          </li>
+
+          <li class="form-impression__item filter-radio">
+            <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="unknown"
+              id="filter-unknown">
+            <label for="filter-unknown">
+              Затрудняюсь ответить
+            </label>
+          </li>
+
+        </ul>
+      </section>
+
+      <section class="filter-form__item form-attractions">
+
+        <h3 class="form-attractions__title">
+          Посещенные достопримечательности:
+        </h3>
+
+        <ul class="form-attractions__list">
+
+          <li class="form-attractions__item filter-checkbox">
+            <input class="visually-hidden filter-checkbox__input" type="checkbox" name="devil's-bridge"
+              id="filter-devil's-bridge" checked>
+            <label for="filter-devil's-bridge">
+              Мост Дьявола
+            </label>
+          </li>
+
+          <li class="form-attractions__item filter-checkbox">
+            <input class="visually-hidden filter-checkbox__input" type="checkbox" name="bell-mountain"
+              id="filter-bell-mountain" checked>
+            <label for="filter-bell-mountain">
+              Гора-Колокол
+            </label>
+          </li>
+
+          <li class="form-attractions__item filter-checkbox">
+            <input class="visually-hidden filter-checkbox__input" type="checkbox" name="slide-park"
+              id="filter-slide-park" checked>
+            <label for="filter-slide-park">
+              Слайд-парк
+            </label>
+          </li>
+
+          <li class="form-attractions__item filter-checkbox">
+            <input class="visually-hidden filter-checkbox__input" type="checkbox" name="red-rocks"
+              id="filter-red-rocks">
+            <label for="filter-red-rocks">
+              Красные скалы
+            </label>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section class="filter-form__item form-emotions">
+
+        <h3 class="form-emotions__title">
+          Опишите свои эмоции:
+        </h3>
+
+        <input class="form-emotions__input" type="text" name="emotions"
+          placeholder="Опишите подробно все свои восторги">
+
+      </section>
+
+      <button class="button button--active" type="submit">
+        Отправить отзыв
+      </button>
+
+    </form>
+
   </main>
 
   <footer class="page-footer">
