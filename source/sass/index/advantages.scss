@@ -1,0 +1,33 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__description {
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      max-width: 256px;
+    }
+
+    img {
+      flex-grow: 1;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,1 +1,69 @@
 // Начните писать стили здесь
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+$Half_Baked:#81b3d2;
+$classic_white:#ffffff;
+$classic_black:#000000;
+$Mine_Shaft:#333333;
+$Gallery:#eeeeee;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-size: 14px;
+  background-color: $classic_white;
+  color: $classic_black;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually_hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1170px;
+}
+
+//Viewports
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+
+
+//Imports
+@import "./placeholder.scss";
+@import "./header/page-header";
+@import "./index/page-main.scss";
+@import "./index/main-intro.scss";
+@import "./index/advantages.scss";
+@import "./index/advantages-inner.scss";
+@import "./index/real-town.scss";
+@import "./index/interesed.scss";
+@import "./button.scss";
+@import "./source/sass/footer/page-footer.scss";
+@import "./source/sass/footer/social.scss";
+@import "./footer/copyright.scss";
+@import "./form/filter-form.scss";
+@import "./form/form-name.scss";
+

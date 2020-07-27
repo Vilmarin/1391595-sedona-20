@@ -1,0 +1,16 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__hashtag {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}

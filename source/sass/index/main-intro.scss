@@ -1,0 +1,36 @@
+.main-intro {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 auto;
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+    }
+  }
+
+  &__description {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $Mine_Shaft;
+    text-align: center;
+  }
+
+  &__wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 285px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 508px;
+    }
+  }
+}

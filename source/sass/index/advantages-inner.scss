@@ -1,0 +1,55 @@
+.advantages-inner {
+
+  background-color: $Gallery;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+    }
+  }
+
+  &__number {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__description {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: $Mine_Shaft;
+    text-align: center;
+
+    &--white-text {
+      color: $classic_white;
+    }
+  }
+
+  &--bg-blue {
+    background-color: $Half_Baked;
+    color: $classic_white;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--img-left {
+      order: -1;
+    }
+  }
+
+  img {
+    flex-grow: 1;
+  }
+}
