@@ -1,4 +1,6 @@
 .main-intro {
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -12,6 +14,14 @@
     @media (min-width: $tablet-width) {
       font-size: 21px;
     }
+
+    &--form {
+      @media (min-width: $tablet-width) {
+        font-size: 30px;
+        line-height: 26px;
+        text-align: center;
+      }
+    }
   }
 
   &__description {
@@ -20,6 +30,11 @@
     line-height: 24px;
     color: $Mine_Shaft;
     text-align: center;
+    width: 275px;
+
+    @media (min-width: $tablet-width) {
+      width: 435px;
+    }
   }
 
   &__wrapper {

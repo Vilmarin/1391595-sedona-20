@@ -13,11 +13,14 @@
   &__input {
     line-height: 26px;
     font-size: 14px;
+    background-color: $Concrete;
+    border-style: none;
 
     @include placeholder {
       font-size: 18px;
       color: $classic_black;
       font-weight: bold;
+      text-transform: none;
     }
   }
 }

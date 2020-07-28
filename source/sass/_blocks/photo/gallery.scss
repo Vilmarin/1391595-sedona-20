@@ -1,0 +1,21 @@
+.gallery {
+  padding: 0;
+
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__description {
+    text-transform: none;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__likes {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
