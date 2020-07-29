@@ -3,6 +3,10 @@
   flex-direction: column;
   margin: 0 auto;
 
+  @media (min-width: $tablet-width) {
+    grid-area: fe;
+  }
+
   &__title {
     font-weight: bold;
     font-size: 18px;

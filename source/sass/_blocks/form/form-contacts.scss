@@ -5,6 +5,10 @@
   margin: 0 auto;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    grid-area: fc;
+  }
+
   &__title {
     font-weight: bold;
     font-size: 18px;
