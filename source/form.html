@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body">
+<body>
 
   <header class="page-header page-header__wrapper">
 
@@ -20,13 +22,16 @@
     </button>
 
     <nav class="page-header__menu">
-      <a class="page-header__link page-header__link--active">
+
+      <a class="page-header__link page-header__link--active" href="index.html">
         Главная
       </a>
 
       <a class="page-header__link page-header__link--active" href="photo.html">
         Фото и видео
       </a>
+
+      <a class="page-header__link page-header__link--active page-header__link--without-p" href="#"></a>
 
       <a class="page-header__link page-header__link--active" href="form.html">
         Форма отзыва
@@ -37,19 +42,23 @@
       </a>
     </nav>
 
-    <button class="page-header__toggle" type="button">
-      <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
-        <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
-        <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
-      </svg>
-      открыть меню
-    </button>
+    <div class="page-header__inner">
 
-    <a class="page-header__logo">
-      логотип сайта Седона
-      <img src="https://via.placeholder.com/102x84" alt="Логотип">
-    </a>
+      <a class="page-header__logo">
+        Главная
+        <img src="./img/logo-sedona-mobile.svg" width="101" height="84" alt="Логотип">
+      </a>
+
+      <button class="page-header__toggle" type="button">
+        <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
+          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
+          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
+        </svg>
+        открыть меню
+      </button>
+
+    </div>
 
   </header>
 
@@ -57,7 +66,7 @@
 
     <section class="main-intro">
 
-      <h1 class="main-intro__title">
+      <h1 class="main-intro__title--form">
         Оставьте свой отзыв
       </h1>
 
@@ -94,21 +103,23 @@
 
       <section class="filter-form__item form-contacts">
 
-        <h3 class="form-contacts_title">
+        <h3 class="form-contacts__title">
           Контактная информация:
         </h3>
 
-        <label class="form-contacts__item">
-          Контактный телефон*:
-          <input class="form-contacts__input" id="appointment-tel" type="text" name="phone" required
-            placeholder="Введите телефон">
-        </label>
+        <div class="form-contacts__wrapper">
+          <label class="form-contacts__item">
+            <span class="form-contacts__phone">Контактный</span>телефон*:
+            <input class="form-contacts__input" id="appointment-tel" type="text" name="phone" required
+              placeholder="Введите телефон">
+          </label>
 
-        <label class="form-contacts__item">
-          Электронная почта*:
-          <input class="form-contacts__input" id="appointment-email" type="text" name="email" required
-            placeholder="Введите e-mail">
-        </label>
+          <label class="form-contacts__item">
+            Электронная почта*:
+            <input class="form-contacts__input" id="appointment-email" type="text" name="email" required
+              placeholder="Введите e-mail">
+          </label>
+        </div>
 
       </section>
 
@@ -118,7 +129,7 @@
           Ваше общее впечатление:
         </h3>
 
-        <ul class="form-impression__list">
+        <ul class="form-expression__list">
 
           <li class="form-impression__item filter-radio">
             <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="positive"
@@ -197,43 +208,44 @@
           Опишите свои эмоции:
         </h3>
 
-        <input class="form-emotions__input" type="text" name="emotions"
-          placeholder="Опишите подробно все свои восторги">
+        <textarea class="form-emotions__input" rows="5" name="emotions"
+          placeholder="Опишите подробно все свои восторги"> </textarea>
 
       </section>
 
-      <button class="button button--active" type="submit">
+      <button class="button button--active filter-form__button" type="submit">
         Отправить отзыв
       </button>
+
+      <p class="filter-form__required-fields">* — обязательные поля</p>
 
     </form>
 
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <span class="page-footer__hashtag">
-        #visitSedona
-      </span>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Седона в Твиттере</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Седона в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Седона в Ютубе</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </div>
+    <span class="page-footer__hashtag">
+      #visitSedona
+    </span>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">Седона в Твиттере</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">Седона в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">Седона в Ютубе</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
+
 </body>
 
 </html>

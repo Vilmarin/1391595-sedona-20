@@ -1,1 +1,95 @@
-// Начните писать стили здесь
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+$Half_Baked:#81b3d2;
+$classic_white:#ffffff;
+$classic_black:#000000;
+$Mine_Shaft:#333333;
+$Gallery:#eeeeee;
+$Concrete:#f2f2f2;
+
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-size: 14px;
+  background-color: $classic_white;
+  color: $classic_black;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually_hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1170px;
+}
+
+//Viewports
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+
+
+//Imports
+@import "./placeholder.scss";
+@import "./_blocks/header/page-header.scss";
+@import "./_blocks/index/page-main.scss";
+@import "./_blocks/index/main-intro.scss";
+@import "./_blocks/index/advantages.scss";
+@import "./_blocks/index/advantages-inner.scss";
+@import "./_blocks/index/real-town.scss";
+@import "./_blocks/index/interesed.scss";
+@import "./button.scss";
+@import "./_blocks/footer/page-footer.scss";
+@import "./_blocks/footer/social.scss";
+@import "./_blocks/footer/copyright.scss";
+@import "./_blocks/form/filter-form.scss";
+@import "./_blocks/form/form-name.scss";
+@import "./_blocks/form/form-contacts.scss";
+@import "./_blocks/form/form-expression.scss";
+@import "./_blocks/form/form-attractions.scss";
+@import "./_blocks/form/form-emotions.scss";
+@import "./_blocks/photo/gallery.scss";
+@import "./_blocks/photo/video-gallery.scss";

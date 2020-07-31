@@ -1,0 +1,36 @@
+.form-attractions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-area: fa;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 55%;
+    }
+  }
+}

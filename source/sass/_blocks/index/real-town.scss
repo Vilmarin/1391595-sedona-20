@@ -1,0 +1,43 @@
+
+
+.real-town {
+
+  padding: 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 21px;
+    color: $Mine_Shaft;
+  }
+
+  &__item {
+    width: 250px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      text-align: center;
+    }
+  }
+}

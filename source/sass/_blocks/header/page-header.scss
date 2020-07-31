@@ -1,0 +1,102 @@
+.page-header {
+  position: relative;
+  background-color: $Half_Baked;
+  color: $classic_white;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+
+  &__close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0;
+    line-height: 0px;
+    width: 22px;
+    height: 22px;
+    outline: none;
+    border-style: none;
+    background-color: inherit;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: $classic_white;
+      color: $classic_black;
+    }
+  }
+
+  &__logo {
+    font-size: 0;
+    line-height: 0px;
+    position: absolute;
+    left: 50%;
+    bottom: -27px;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      bottom: auto;
+      top: 0;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 15px;
+    bottom: 18px;
+    font-size: 0;
+    outline: none;
+    border-style: none;
+    background-color: inherit;
+    width: 30px;
+    height: 22px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    background-color: $classic_white;
+    display: flex;
+    flex-direction: column;
+    height: 56px;
+
+    @media (min-width: $tablet-width) {
+      height: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 156px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 15px 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 14px;
+      line-height: 26px;
+      padding: 15px 0;
+    }
+
+    &--without-p {
+      padding: 0;
+    }
+  }
+}

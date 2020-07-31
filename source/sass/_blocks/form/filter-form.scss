@@ -1,0 +1,36 @@
+.filter-form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "fe fn"
+      "fc fc"
+      "fa fa"
+      "fem fem"
+      "fbtn .";
+  }
+
+  &__button {
+    @media (min-width: $tablet-width) {
+      grid-area: fbtn;
+      height: 58px;
+      width: 324px;
+    }
+  }
+
+  &__required-fields {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      text-align: right;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}
