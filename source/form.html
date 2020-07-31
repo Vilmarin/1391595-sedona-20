@@ -23,7 +23,7 @@
 
     <nav class="page-header__menu">
 
-      <a class="page-header__link page-header__link--active" href="#">
+      <a class="page-header__link page-header__link--active" href="index.html">
         Главная
       </a>
 
@@ -107,17 +107,19 @@
           Контактная информация:
         </h3>
 
-        <label class="form-contacts__item">
-          Контактный телефон*:
-          <input class="form-contacts__input" id="appointment-tel" type="text" name="phone" required
-            placeholder="Введите телефон">
-        </label>
+        <div class="form-contacts__wrapper">
+          <label class="form-contacts__item">
+            <span class="form-contacts__phone">Контактный</span>телефон*:
+            <input class="form-contacts__input" id="appointment-tel" type="text" name="phone" required
+              placeholder="Введите телефон">
+          </label>
 
-        <label class="form-contacts__item">
-          Электронная почта*:
-          <input class="form-contacts__input" id="appointment-email" type="text" name="email" required
-            placeholder="Введите e-mail">
-        </label>
+          <label class="form-contacts__item">
+            Электронная почта*:
+            <input class="form-contacts__input" id="appointment-email" type="text" name="email" required
+              placeholder="Введите e-mail">
+          </label>
+        </div>
 
       </section>
 
