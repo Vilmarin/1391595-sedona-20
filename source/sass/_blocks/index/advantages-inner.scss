@@ -1,14 +1,13 @@
 .advantages-inner {
-
-  background-color: $Gallery;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
 
   &__title {
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
+    margin: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 21px;
@@ -16,8 +15,53 @@
   }
 
   &__number {
+    position: relative;
     font-size: 14px;
     line-height: 21px;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      top: 65%;
+      left: -12px;
+      background-color: $classic_white;
+    }
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      top: 65%;
+      background-color: $classic_white;
+    }
+
+    &--black {
+      &::before {
+        content: "";
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        top: 65%;
+        left: -12px;
+        background-color: $classic_black;
+      }
+
+      &::after {
+        content: "";
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        top: 65%;
+        background-color: $classic_black;
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 10px;
+    }
   }
 
   &__description {
@@ -26,9 +70,13 @@
     line-height: 21px;
     color: $Mine_Shaft;
     text-align: center;
+    margin: 0;
+    max-width: 300px;
+    padding-top: 16px;
 
     &--white-text {
       color: $classic_white;
+      padding-top: 15px;
     }
   }
 
@@ -51,5 +99,33 @@
 
   img {
     flex-grow: 1;
+  }
+
+  &__road {
+    padding-top: 52px;
+    max-width: 205px;
+  }
+
+  &__square {
+    max-width: 260px;
+  }
+
+  &__tourists {
+    padding-top: 53px;
+    max-width: 250px;
+  }
+
+  &__road,
+  &__tourists {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 277px;
+      height: 1px;
+      position: absolute;
+      top: 15%;
+      background-color: $alto;
+    }
   }
 }

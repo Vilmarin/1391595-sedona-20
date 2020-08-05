@@ -1,4 +1,91 @@
-.social__list {
+.social {
   display: flex;
-  list-style: none;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 33px;
+  }
+
+  &__link {
+    margin: 0 3px;
+
+    &--twitter {
+      font-size: 0;
+      display: block;
+      background-image: url("../img/icon-twitter.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $Half_Baked;
+      width: 46px;
+      height: 48px;
+
+      &:hover,
+      &:focus {
+        background-color: $blue_button_hover;
+      }
+
+      &:active {
+        background-image: url("../img/twitter-active.svg");
+        width: 46px;
+        height: 48px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $blue_button_active;
+      }
+    }
+
+    &--facebook {
+      font-size: 0;
+      display: block;
+      background-image: url("../img/icon-facebook.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $Half_Baked;
+      width: 47px;
+      height: 48px;
+
+      &:hover,
+      &:focus {
+        background-color: $blue_button_hover;
+      }
+
+      &:active {
+        background-image: url("../img/facebook-active.svg");
+        width: 47px;
+        height: 48px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $blue_button_active;
+      }
+    }
+
+    &--youtube {
+      font-size: 0;
+      display: block;
+      background-image: url("../img/icon-youtube.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $Half_Baked;
+      width: 46px;
+      height: 48px;
+
+
+      &:hover,
+      &:focus {
+        background-color: $blue_button_hover;
+      }
+
+      &:active {
+        background-image: url("../img/youtube-active.svg");
+        width: 46px;
+        height: 48px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $blue_button_active;
+      }
+    }
+  }
 }
