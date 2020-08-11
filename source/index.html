@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -14,7 +15,7 @@
 
     <nav class="page-header__menu">
 
-      <a class="page-header__link page-header__link--active" href="index.html">
+      <a class="page-header__link page-header__link--main-link" href="index.html">
         Главная
       </a>
 
@@ -27,17 +28,17 @@
         </svg>
       </button>
 
-      <a class="page-header__link page-header__link--active" href="photo.html">
+      <a class="page-header__link page-header__link--photo-link" href="photo.html">
         Фото и видео
       </a>
 
       <a class="page-header__link page-header__link--active page-header__link--without-p" href="#"></a>
 
-      <a class="page-header__link page-header__link--active" href="form.html">
+      <a class="page-header__link page-header__link--form-link" href="form.html">
         Форма отзыва
       </a>
 
-      <a class="page-header__link page-header__link--active" href="#">
+      <a class="page-header__link page-header__link--html-link" href="#">
         HTML Academy
       </a>
     </nav>
@@ -46,7 +47,10 @@
 
       <a class="page-header__logo">
         Главная
-        <img src="./img/logo-sedona-mobile.svg" width="101" height="84" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-sedona-desktop.svg" media="(min-width:1200px)">
+          <img src="img/logo-sedona-mobile.svg" alt="Логотип">
+        </picture>
       </a>
 
       <button class="page-header__toggle" type="button">
@@ -87,18 +91,23 @@
             <div class="advantages__description advantages__description--first">
 
               <h3 class="advantages-inner__title">
-                Настоящий городок
+                Настоящий <br> городок
               </h3>
 
               <span class="advantages-inner__number">
                 № 1
               </span>
 
-              <p class="advantages-inner__description advantages-inner__description--white-text">
+              <p
+                class="advantages-inner__description advantages-inner__description--white-text advantages-inner__description--width">
                 Седона не аттракцион для туристов, там течёт своя жизнь
               </p>
             </div>
-            <img src="../img/main-city-mobile@1x.jpg" alt="Фото жилья">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/main-city-desktop@1x.jpg">
+              <source media="(min-width:768px)" srcset="img/main-city-tablet@1x.jpg">
+              <img src="img/main-city-mobile@1x.jpg" alt="Фото жилья">
+            </picture>
           </div>
 
           <ul class="real-town__list">
@@ -118,7 +127,7 @@
                 Сувениры
               </b>
               <p class="real-town__description">
-                Не только китайского, но и местного производства!
+                Не только китайского,<br> но и местного производства!
               </p>
             </li>
 
@@ -128,7 +137,7 @@
               </b>
 
               <p class="real-town__description">
-                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!
               </p>
             </li>
           </ul>
@@ -141,7 +150,7 @@
             <div class="advantages__description">
 
               <h3 class="advantages-inner__title">
-                Там есть Мост Дьявола
+                Там есть <br> Мост Дьявола
               </h3>
               <span class="advantages-inner__number">
                 № 2
@@ -151,7 +160,11 @@
               </p>
             </div>
 
-            <img class="advantages-inner--img-left" src="../img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола">
+            <picture class="advantages-inner__picture">
+              <source media="(min-width:1200px)" srcset="img/main-bridge-desktop@1x.jpg">
+              <source media="(min-width:768px)" srcset="img/main-bridge-tablet@1x.jpg">
+              <img class="advantages-inner--img-left" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола">
+            </picture>
           </div>
 
         </li>
@@ -160,7 +173,7 @@
           <li class="advantages__item advantages-inner advantages-inner__square">
 
             <h3 class="advantages-inner__title">
-              Небольшая площадь
+              Небольшая <br> площадь
             </h3>
 
             <span class="advantages-inner__number advantages-inner__number--black">
@@ -168,14 +181,14 @@
             </span>
 
             <p class="advantages-inner__description">
-              Все интересные места находятся очень близко
+              Все интересные места <br> находятся очень близко
             </p>
           </li>
 
           <li class="advantages__item advantages-inner advantages-inner__road">
 
             <h3 class="advantages-inner__title">
-              Красивая дорога
+              Красивая <br> дорога
             </h3>
 
             <span class="advantages-inner__number advantages-inner__number--black">
@@ -190,7 +203,7 @@
           <li class="advantages__item advantages-inner advantages-inner__tourists">
 
             <h3 class="advantages-inner__title">
-              Мало туристов
+              Мало <br> туристов
             </h3>
 
             <span class="advantages-inner__number advantages-inner__number--black">
@@ -215,13 +228,17 @@
           </h3>
 
           <p class="interesed__discription">
-            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+            Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
           <a class="interesed__link button button--active" href="#">
             Найти гостиницу
           </a>
         </div>
-        <img src="../img/bg-map-mobile@1x.jpg" alt="Карта">
+        <picture>
+          <source srcset="img/bg-map-desktop@1x.jpg" media="(min-width:1200px)">
+          <source srcset="img/bg-map-tablet@1x.jpg" media="(min-width:768px)">
+          <img src="img/bg-map-mobile@1x.jpg" alt="Карта">
+        </picture>
 
       </div>
 

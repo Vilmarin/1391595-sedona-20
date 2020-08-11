@@ -3,6 +3,19 @@
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: $mobile-width-only) {
+    picture {
+      height: 260px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    picture {
+      height: 256px;
+    }
+  }
+
+
   &__title {
     font-weight: bold;
     font-size: 18px;
@@ -11,6 +24,13 @@
 
     @media (min-width: $tablet-width) {
       font-size: 21px;
+      text-align: center;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      br {
+        display: none;
+      }
     }
   }
 
@@ -62,6 +82,10 @@
     @media (max-width: $mobile-width-only) {
       padding-top: 10px;
     }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 13px;
+    }
   }
 
   &__description {
@@ -77,6 +101,37 @@
     &--white-text {
       color: $classic_white;
       padding-top: 15px;
+
+      @media (min-width: $tablet-width) {
+        padding-top: 24px;
+        width: 197px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 220px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 24px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      br {
+        display: none;
+      }
+    }
+
+    &--width {
+      @media (min-width: $desktop-width) {
+        width: 280px;
+      }
+    }
+
+    br {
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
     }
   }
 
@@ -87,7 +142,6 @@
 
     @media (min-width: 768px) {
       flex-direction: row;
-      align-items: center;
     }
   }
 
@@ -104,28 +158,70 @@
   &__road {
     padding-top: 52px;
     max-width: 205px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 101px;
+      padding-top: 25px;
+      max-width: 130px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 117px;
+      padding-top: 23px;
+      max-width: 269px;
+    }
   }
 
   &__square {
     max-width: 260px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 300px;
+      margin-left: 48px;
+      padding-top: 25px;
+    }
   }
 
   &__tourists {
     padding-top: 53px;
     max-width: 250px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 116px;
+      padding-top: 26px;
+      max-width: 272px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 21px;
+      padding-top: 26px;
+      max-width: 375px;
+    }
   }
 
   &__road,
   &__tourists {
     position: relative;
 
-    &::before {
-      content: "";
-      width: 277px;
-      height: 1px;
-      position: absolute;
-      top: 15%;
-      background-color: $alto;
+    @media (max-width: $mobile-width-only) {
+      &::before {
+        content: "";
+        width: 277px;
+        height: 1px;
+        position: absolute;
+        top: 15%;
+        background-color: $alto;
+      }
+    }
+  }
+
+  &__picture {
+    @media (min-width: $tablet-width) {
+      order: -1;
     }
   }
 }

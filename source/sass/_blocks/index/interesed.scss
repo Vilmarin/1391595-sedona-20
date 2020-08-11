@@ -9,10 +9,11 @@
     line-height: 26px;
     text-align: center;
     margin: 0;
-    padding-top: 19px;
+    padding-top: 32px;
 
     @media (min-width: $tablet-width) {
       font-size: 30px;
+      padding-top: 55px;
     }
   }
 
@@ -23,8 +24,25 @@
     color: $Mine_Shaft;
     text-align: center;
     max-width: 290px;
-    padding-top: 8px;
-    padding-bottom: 13px;
+    padding-top: 21px;
+    padding-bottom: 28px;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 35px;
+      padding-bottom: 38px;
+      max-width: 440px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 42px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -47,5 +65,13 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 49px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 58px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 67px;
+    }
   }
 }

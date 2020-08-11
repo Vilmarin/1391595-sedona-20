@@ -2,14 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &::before {
     content: "";
     width: 100%;
-    height: 387px;
+    height: 389px;
     background-image: url("../img/Intro-index-mobile.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    max-width: 1200px;
+
+    @media (min-width: $tablet-width) {
+      height: 518px;
+      background-image: url("../img/Intro-index.jpg");
+    }
   }
 }

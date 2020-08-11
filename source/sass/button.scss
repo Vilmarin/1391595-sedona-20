@@ -8,4 +8,8 @@
   border-style: none;
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
 }
