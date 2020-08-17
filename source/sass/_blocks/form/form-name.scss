@@ -3,22 +3,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     grid-area: fn;
   }
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $mercury;
+    top: 15px;
+  }
+
   &__title {
+    margin: 0;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
+    margin-top: 36px;
+    margin-bottom: 19px;
   }
 
   &__input {
     line-height: 26px;
-    font-size: 14px;
-    background-color: $Concrete;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: $concrete;
     border-style: none;
+    padding-top: 19px;
+    padding-bottom: 13px;
+
+    &--name {
+      width: 230px;
+      padding-left: 20px;
+      margin-left: 10px;
+    }
+
+    &--surname {
+      width: 192px;
+      padding-left: 21px;
+      margin-left: 10px;
+      letter-spacing: -1px;
+    }
+
+    &--patronymic {
+      width: 194px;
+      margin-left: 13px;
+      padding-left: 20px;
+      letter-spacing: -1.5px;
+    }
 
     @include placeholder {
       font-size: 18px;
@@ -26,5 +62,9 @@
       font-weight: bold;
       text-transform: none;
     }
+  }
+
+  &__user-name {
+    margin-bottom: 20px;
   }
 }

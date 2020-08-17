@@ -14,7 +14,7 @@
 
     <nav class="page-header__menu">
 
-      <a class="page-header__link page-header__link--active" href="index.html">
+      <a class="page-header__link page-header__link--main-link" href="index.html">
         Главная
       </a>
 
@@ -27,17 +27,17 @@
         </svg>
       </button>
 
-      <a class="page-header__link page-header__link--active" href="photo.html">
+      <a class="page-header__link page-header__link--photo-link" href="photo.html">
         Фото и видео
       </a>
 
       <a class="page-header__link page-header__link--active page-header__link--without-p" href="#"></a>
 
-      <a class="page-header__link page-header__link--active" href="form.html">
+      <a class="page-header__link page-header__link--form-link" href="form.html">
         Форма отзыва
       </a>
 
-      <a class="page-header__link page-header__link--active" href="#">
+      <a class="page-header__link page-header__link--html-link" href="#">
         HTML Academy
       </a>
     </nav>
@@ -46,10 +46,13 @@
 
       <a class="page-header__logo">
         Главная
-        <img src="./img/logo-sedona-mobile.svg" width="101" height="84" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-sedona-desktop.svg" media="(min-width:1200px)">
+          <img src="img/logo-sedona-mobile.svg" alt="Логотип">
+        </picture>
       </a>
 
-      <button class="page-header__toggle page-header__toggle--active" type="button">
+      <button class="page-header__toggle" type="button">
         <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
           <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
@@ -62,7 +65,7 @@
 
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main__form-background">
 
     <section class="main-intro">
 
@@ -85,18 +88,20 @@
 
         <label class="form-name__user-name">
           Имя*:
-          <input class="form-name__input" id="user-name" type="text" name="name" required placeholder="Петр">
+          <input class="form-name__input form-name__input--name" id="user-name" type="text" name="name" required
+            placeholder="Петр">
         </label>
 
-        <label class="form-name__user-name">
+        <label class="form-name__user-name form-name__user-name">
           Фамилия*:
-          <input class="form-name__input" id="user-surname" type="text" name="surname" required placeholder="Иванов">
+          <input class="form-name__input form-name__input--surname" id="user-surname" type="text" name="surname"
+            required placeholder="Иванов">
         </label>
 
         <label class="form-name__user-name">
           Отчество:
-          <input class="form-name__input" id="user-patronymic" type="text" name="patronymic"
-            placeholder="Александрович">
+          <input class="form-name__input form-name__input--patronymic" id="user-patronymic" type="text"
+            name="patronymic" placeholder="Александрович">
         </label>
 
       </section>
@@ -108,17 +113,21 @@
         </h3>
 
         <div class="form-contacts__wrapper">
-          <label class="form-contacts__item">
+          <label class="form-contacts__item" for="appointment-tel">
             <span class="form-contacts__phone">Контактный</span>телефон*:
-            <input class="form-contacts__input" id="appointment-tel" type="text" name="phone" required
-              placeholder="Введите телефон">
           </label>
+          <div class="form-contacts__input--phone">
+            <input class="form-contacts__input " id="appointment-tel" type="text" name="phone" required
+              placeholder="Введите телефон">
+          </div>
 
-          <label class="form-contacts__item">
+          <label class="form-contacts__item" for="appointment-email">
             Электронная почта*:
+          </label>
+          <div class="form-contacts__input--email">
             <input class="form-contacts__input" id="appointment-email" type="text" name="email" required
               placeholder="Введите e-mail">
-          </label>
+          </div>
         </div>
 
       </section>
@@ -131,26 +140,26 @@
 
         <ul class="form-expression__list">
 
-          <li class="form-impression__item filter-radio">
+          <li class="form-expression__item filter-radio">
             <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="positive"
               id="filter-positive" checked>
-            <label for="filter-positive">
+            <label for="filter-positive" class="filter-radio__radio-box">
               Скорее положительное
             </label>
           </li>
 
-          <li class="form-impression__item filter-radio">
+          <li class="form-expression__item filter-radio">
             <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="negative"
               id="filter-negative">
-            <label for="filter-negative">
+            <label for="filter-negative" class="filter-radio__radio-box">
               Скорее отрицательное
             </label>
           </li>
 
-          <li class="form-impression__item filter-radio">
+          <li class="form-expression__item filter-radio">
             <input class="visually-hidden filter-radio__input" type="radio" name="impression" value="unknown"
               id="filter-unknown">
-            <label for="filter-unknown">
+            <label for="filter-unknown" class="filter-radio__radio-box">
               Затрудняюсь ответить
             </label>
           </li>

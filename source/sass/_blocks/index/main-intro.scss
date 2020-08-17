@@ -17,6 +17,12 @@
     }
 
     &--form {
+      margin: 0;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      margin-top: 36px;
+
       @media (min-width: $tablet-width) {
         font-size: 30px;
         line-height: 26px;
@@ -29,7 +35,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    color: $Mine_Shaft;
+    color: $mine_shaft;
     text-align: center;
     width: 275px;
     margin: 0;

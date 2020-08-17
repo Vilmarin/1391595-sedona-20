@@ -3,15 +3,16 @@
 *::after {
   box-sizing: border-box;
 }
-$Half_Baked:#81b3d2;
+$half_Baked:#81b3d2;
 $classic_white:#ffffff;
 $classic_black:#000000;
-$Mine_Shaft:#333333;
-$Gallery:#eeeeee;
-$Concrete:#f2f2f2;
+$mine_shaft:#333333;
+$gallery:#eeeeee;
+$concrete:#f2f2f2;
 $blue_button_hover:#669ec0;
 $blue_button_active:#5496bd;
 $alto:#d6d6d6;
+$mercury:#e5e5e5;
 
 
 @font-face {
@@ -96,3 +97,4 @@ $mobile-width-only: 767px;
 @import "./_blocks/form/form-emotions.scss";
 @import "./_blocks/photo/gallery.scss";
 @import "./_blocks/photo/video-gallery.scss";
+@import "./_blocks/form/filter-radio.scss";

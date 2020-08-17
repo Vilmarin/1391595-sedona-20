@@ -5,19 +5,39 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  &::before {
-    content: "";
-    width: 100%;
-    height: 389px;
-    background-image: url("../img/Intro-index-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    max-width: 1200px;
+  &__index-background {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 389px;
+      background-image: url("../img/Intro-index-mobile.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      max-width: 1200px;
 
-    @media (min-width: $tablet-width) {
-      height: 518px;
-      background-image: url("../img/Intro-index.jpg");
+      @media (min-width: $tablet-width) {
+        height: 518px;
+        background-image: url("../img/Intro-index.jpg");
+      }
+    }
+  }
+
+  &__form-background {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 157px;
+      background-image: url("../img/sedona-form.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      max-width: 1200px;
+
+      @media (min-width: $tablet-width) {
+        height: 518px;
+        background-image: url("../img/Intro-index.jpg");
+      }
     }
   }
 }

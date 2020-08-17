@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  background-color: $Half_Baked;
+  background-color: $half_Baked;
   color: $classic_white;
   display: flex;
   flex-direction: column;
@@ -122,7 +122,7 @@
 
       @media (min-width: $tablet-width) {
         background-color: transparent;
-        color: $Half_Baked;
+        color: $half_Baked;
       }
     }
 
@@ -131,7 +131,7 @@
 
       @media (min-width: $tablet-width) {
         background-color: transparent;
-        color: $Half_Baked;
+        color: $half_Baked;
       }
     }
 
