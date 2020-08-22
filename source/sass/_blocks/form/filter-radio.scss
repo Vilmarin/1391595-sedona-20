@@ -1,0 +1,65 @@
+.filter-radio {
+  display: flex;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+
+    &:checked + .filter-radio__radio-box {
+      &::after {
+        display: block;
+      }
+
+      &:active {
+        &::before {
+          background-color: $radio-box-active;
+        }
+
+        &::after {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  &__radio-box {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: $concrete;
+      position: absolute;
+      top: -16px;
+      left: -76px;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-color: $mercury;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: $radio-box-active;
+      }
+    }
+
+    &::after {
+      content: "";
+      border-radius: 50%;
+      background-color: $mine_shaft;
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      top: 2px;
+      left: -59px;
+      display: none;
+    }
+  }
+}

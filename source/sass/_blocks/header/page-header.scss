@@ -1,17 +1,27 @@
 .page-header {
   position: relative;
-  background-color: $Half_Baked;
+  background-color: $half_Baked;
   color: $classic_white;
   display: flex;
   flex-direction: column;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 
   &__close-button {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 16px;
+    right: 26px;
     font-size: 0;
     line-height: 0px;
     width: 22px;
@@ -19,6 +29,17 @@
     outline: none;
     border-style: none;
     background-color: inherit;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -28,13 +49,11 @@
   &__menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: relative;
 
     @media (min-width: $tablet-width) {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
       background-color: $classic_white;
       color: $classic_black;
     }
@@ -56,7 +75,7 @@
 
   &__toggle {
     position: absolute;
-    right: 15px;
+    right: 19px;
     bottom: 18px;
     font-size: 0;
     outline: none;
@@ -64,6 +83,16 @@
     background-color: inherit;
     width: 30px;
     height: 22px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -83,20 +112,108 @@
 
   &__link {
     display: block;
-    width: 156px;
     text-align: center;
     font-size: 18px;
     line-height: 40px;
-    padding: 15px 0;
+    padding: 7px 0;
+
+    &:hover {
+      background-color: $blue_button_hover;
+
+      @media (min-width: $tablet-width) {
+        background-color: transparent;
+        color: $half_Baked;
+      }
+    }
+
+    &:focus {
+      background-color: $blue_button_hover;
+
+      @media (min-width: $tablet-width) {
+        background-color: transparent;
+        color: $half_Baked;
+      }
+    }
+
+    &:active {
+      background-color: $blue_button_active;
+      color: rgba(255, 255, 255, 0.3);
+
+      @media (min-width: $tablet-width) {
+        background-color: transparent;
+        opacity: 0.3;
+        color: $classic_black;
+      }
+    }
+
+
+    &:last-child {
+      @media (max-width: $mobile-width-only) {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        padding-bottom: 6px;
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      border-top: 1px solid rgba(1, 1, 1, 0.2);
+      margin-top: 1px;
+      box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
 
     @media (min-width: $tablet-width) {
       font-size: 14px;
       line-height: 26px;
       padding: 15px 0;
+      border-style: none;
     }
 
     &--without-p {
       padding: 0;
+
+      @media (max-width: $mobile-width-only) {
+        display: none;
+      }
+    }
+
+    &--main-link {
+      @media (min-width: $tablet-width) {
+        margin-left: 49px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 92px;
+      }
+    }
+
+    &--photo-link {
+      @media (min-width: $tablet-width) {
+        margin-left: 77px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 162px;
+      }
+    }
+
+    &--form-link {
+      @media (min-width: $tablet-width) {
+        margin-left: 210px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 383px;
+      }
+    }
+
+    &--html-link {
+      @media (min-width: $tablet-width) {
+        margin-left: 51px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 139px;
+      }
     }
   }
 }

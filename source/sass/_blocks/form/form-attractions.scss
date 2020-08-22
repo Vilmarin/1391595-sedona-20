@@ -2,9 +2,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     grid-area: fa;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: $line-form-tablet;
+    top: 70px;
+    left: 9px;
+
+    @media (min-width: $desktop-width) {
+      width: 278px;
+      top: 69px;
+      left: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: $line-form-tablet;
+    top: 70px;
+    right: 9px;
+
+    @media (min-width: $desktop-width) {
+      width: 278px;
+      top: 69px;
+      right: 0;
+    }
   }
 
   &__title {
@@ -12,6 +45,14 @@
     font-size: 18px;
     line-height: 26px;
     text-align: center;
+    margin: 0;
+    margin-top: 14px;
+    margin-bottom: 36px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      margin-top: 45px;
+    }
   }
 
   &__list {
@@ -26,11 +67,70 @@
     @media (min-width: $tablet-width) {
       display: flex;
       flex-wrap: wrap;
-      width: 50%;
+      width: 465px;
+      margin-top: 23px;
+      margin-right: 3px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 55%;
+      width: 100%;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    margin-bottom: 54px;
+
+    @media (min-width: $desktop-width) {
+      max-width: 55%;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 100%;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 61px;
+    }
+
+    &--bridge {
+      @media (min-width: $tablet-width) {
+        margin-left: 84px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 81px;
+      }
+    }
+
+    &--mount {
+      @media (min-width: $tablet-width) {
+        margin-left: 151px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 148px;
+      }
+    }
+
+    &--park {
+      @media (min-width: $tablet-width) {
+        margin-left: 85px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 150px;
+      }
+    }
+
+    &--red-mount {
+      @media (min-width: $tablet-width) {
+        margin-left: 168px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 148px;
+      }
     }
   }
 }

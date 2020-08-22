@@ -1,6 +1,6 @@
 .button {
   color: $classic_white;
-  background-color: $Half_Baked;
+  background-color: $half_Baked;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -8,4 +8,8 @@
   border-style: none;
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
 }

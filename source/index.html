@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -12,32 +13,32 @@
 
   <header class="page-header page-header__wrapper">
 
-    <button class="page-header__close-button page-header__close-button--active" type="button">
-      закрыть меню
-      <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
-          fill="white" />
-      </svg>
-    </button>
-
     <nav class="page-header__menu">
 
-      <a class="page-header__link page-header__link--active" href="index.html">
+      <a class="page-header__link page-header__link--main-link" href="index.html">
         Главная
       </a>
 
-      <a class="page-header__link page-header__link--active" href="photo.html">
+      <button class="page-header__close-button page-header__close-button--active" type="button">
+        закрыть меню
+        <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
+            fill="white" />
+        </svg>
+      </button>
+
+      <a class="page-header__link page-header__link--photo-link" href="photo.html">
         Фото и видео
       </a>
 
       <a class="page-header__link page-header__link--active page-header__link--without-p" href="#"></a>
 
-      <a class="page-header__link page-header__link--active" href="form.html">
+      <a class="page-header__link page-header__link--form-link" href="form.html">
         Форма отзыва
       </a>
 
-      <a class="page-header__link page-header__link--active" href="#">
+      <a class="page-header__link page-header__link--html-link" href="#">
         HTML Academy
       </a>
     </nav>
@@ -46,7 +47,10 @@
 
       <a class="page-header__logo">
         Главная
-        <img src="./img/logo-sedona-mobile.svg" width="101" height="84" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-sedona-desktop.svg" media="(min-width:1200px)">
+          <img src="img/logo-sedona-mobile.svg" alt="Логотип">
+        </picture>
       </a>
 
       <button class="page-header__toggle" type="button">
@@ -62,12 +66,12 @@
 
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main__index-background">
     <section class="page-main__main-intro main-intro">
       <div class="main-intro__wrapper">
 
         <h1 class="main-intro__title">
-          Седона - небольшой городок в Аризоне, заслуживающий большего!
+          Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!
         </h1>
 
         <p class="main-intro__description">
@@ -84,27 +88,31 @@
 
           <div class="advantages-inner advantages-inner--bg-blue">
 
-            <div class="advantages__description">
+            <div class="advantages__description advantages__description--first">
 
               <h3 class="advantages-inner__title">
-                Настоящий городок
+                Настоящий <br> городок
               </h3>
 
               <span class="advantages-inner__number">
                 № 1
               </span>
 
-              <p class="advantages-inner__description advantages-inner__description--white-text">
+              <p
+                class="advantages-inner__description advantages-inner__description--white-text advantages-inner__description--width">
                 Седона не аттракцион для туристов, там течёт своя жизнь
               </p>
             </div>
-
-            <img src="https://via.placeholder.com/320x260" alt="Фото жилья">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/main-city-desktop@1x.jpg">
+              <source media="(min-width:768px)" srcset="img/main-city-tablet@1x.jpg">
+              <img src="img/main-city-mobile@1x.jpg" alt="Фото жилья">
+            </picture>
           </div>
 
           <ul class="real-town__list">
 
-            <li class="real-town__item">
+            <li class="real-town__house">
               <b class="real-town__title">
                 Жилье
               </b>
@@ -113,23 +121,23 @@
               </p>
             </li>
 
-            <li class="real-town__item">
+            <li class="real-town__present">
 
               <b class="real-town__title">
                 Сувениры
               </b>
               <p class="real-town__description">
-                Не только китайского, но и местного производства!
+                Не только китайского,<br> но и местного производства!
               </p>
             </li>
 
-            <li class="real-town__item">
+            <li class="real-town__food">
               <b class="real-town__title">
                 Еда
               </b>
 
               <p class="real-town__description">
-                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!
               </p>
             </li>
           </ul>
@@ -142,7 +150,7 @@
             <div class="advantages__description">
 
               <h3 class="advantages-inner__title">
-                Там есть Мост Дьявола
+                Там есть <br> Мост Дьявола
               </h3>
               <span class="advantages-inner__number">
                 № 2
@@ -152,33 +160,38 @@
               </p>
             </div>
 
-            <img class="advantages-inner--img-left" src="https://via.placeholder.com/320x260" alt="Мост Дьявола">
+            <picture class="advantages-inner__picture">
+              <source media="(min-width:1200px)" srcset="img/main-bridge-desktop@1x.jpg">
+              <source media="(min-width:768px)" srcset="img/main-bridge-tablet@1x.jpg">
+              <img class="advantages-inner--img-left" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола">
+            </picture>
           </div>
 
         </li>
 
         <div class="advantages__wrapper">
-          <li class="advantages__item advantages-inner">
+          <li class="advantages__item advantages-inner advantages-inner__square">
 
             <h3 class="advantages-inner__title">
-              Небольшая площадь
+              Небольшая <br> площадь
             </h3>
-            <span class="advantages-inner__number">
+
+            <span class="advantages-inner__number advantages-inner__number--black">
               № 3
             </span>
 
             <p class="advantages-inner__description">
-              Все интересные места находятся очень близко
+              Все интересные места <br> находятся очень близко
             </p>
           </li>
 
-          <li class="advantages__item advantages-inner">
+          <li class="advantages__item advantages-inner advantages-inner__road">
 
             <h3 class="advantages-inner__title">
-              Красивая дорога
+              Красивая <br> дорога
             </h3>
 
-            <span class="advantages-inner__number">
+            <span class="advantages-inner__number advantages-inner__number--black">
               № 4
             </span>
 
@@ -187,13 +200,13 @@
             </p>
           </li>
 
-          <li class="advantages__item advantages-inner">
+          <li class="advantages__item advantages-inner advantages-inner__tourists">
 
             <h3 class="advantages-inner__title">
-              Мало туристов
+              Мало <br> туристов
             </h3>
 
-            <span class="advantages-inner__number">
+            <span class="advantages-inner__number advantages-inner__number--black">
               № 5
             </span>
 
@@ -209,18 +222,23 @@
 
       <div class="advantages__interesed interesed">
 
-        <h3 class="interesed__title">
-          Заинтересовались?
-        </h3>
+        <div class="interesed__inner">
+          <h3 class="interesed__title">
+            Заинтересовались?
+          </h3>
 
-        <p class="interesed__discription">
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-        </p>
-        <a class="interesed__link button button--active" href="#">
-          Найти гостиницу
-        </a>
-
-        <img src="https://via.placeholder.com/320x350" alt="Карта">
+          <p class="interesed__discription">
+            Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
+          </p>
+          <a class="interesed__link button button--active" href="#">
+            Найти гостиницу
+          </a>
+        </div>
+        <picture>
+          <source srcset="img/bg-map-desktop@1x.jpg" media="(min-width:1200px)">
+          <source srcset="img/bg-map-tablet@1x.jpg" media="(min-width:768px)">
+          <img src="img/bg-map-mobile@1x.jpg" alt="Карта">
+        </picture>
 
       </div>
 
@@ -228,10 +246,13 @@
   </main>
 
   <footer class="page-footer">
+
     <span class="page-footer__hashtag">
       #visitSedona
     </span>
+
     <div class="page-footer__social social">
+
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--twitter" href="#">Седона в Твиттере</a>
@@ -246,7 +267,13 @@
     </div>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <svg width="27" height="35" viewbox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
+            fill="currentColor" />
+        </svg>
+      </a>
     </div>
   </footer>
 </body>

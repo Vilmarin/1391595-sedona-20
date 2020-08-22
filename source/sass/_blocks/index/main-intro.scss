@@ -10,16 +10,43 @@
     font-weight: bold;
     font-size: 18px;
     text-align: center;
+    margin: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 21px;
     }
 
     &--form {
+      margin: 0;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      margin-top: 36px;
+
       @media (min-width: $tablet-width) {
         font-size: 30px;
         line-height: 26px;
         text-align: center;
+        margin-top: 61px;
+        margin-bottom: 5px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 124px;
+      }
+    }
+
+    &--photo {
+      margin-top: 34px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 30px;
+        line-height: 26px;
+        margin-top: 62px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 101px;
       }
     }
   }
@@ -28,12 +55,28 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    color: $Mine_Shaft;
+    color: $mine_shaft;
     text-align: center;
     width: 275px;
+    margin: 0;
 
     @media (min-width: $tablet-width) {
-      width: 435px;
+      width: 444px;
+      padding-top: 29px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 31px;
+    }
+
+    &--photo {
+      padding-top: 27px;
+      margin-bottom: 54px;
+
+      @media (min-width: $tablet-width) {
+        padding-top: 34px;
+        margin-bottom: 78px;
+      }
     }
   }
 
@@ -42,10 +85,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 285px;
+
+    @media (max-width: $mobile-width-only) {
+      max-width: 260px;
+      padding-top: 34px;
+      padding-right: 4px;
+    }
 
     @media (min-width: $tablet-width) {
       max-width: 508px;
+      padding-top: 45px;
+      padding-bottom: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 57px;
+      padding-bottom: 30px;
     }
   }
 }

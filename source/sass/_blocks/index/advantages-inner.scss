@@ -1,45 +1,147 @@
 .advantages-inner {
-
-  background-color: $Gallery;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    picture {
+      height: 260px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    picture {
+      height: 256px;
+    }
+  }
+
 
   &__title {
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
+    margin: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 21px;
+      text-align: center;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      br {
+        display: none;
+      }
     }
   }
 
   &__number {
+    position: relative;
     font-size: 14px;
     line-height: 21px;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      top: 65%;
+      left: -12px;
+      background-color: $classic_white;
+    }
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      top: 65%;
+      background-color: $classic_white;
+    }
+
+    &--black {
+      &::before {
+        content: "";
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        top: 65%;
+        left: -12px;
+        background-color: $classic_black;
+      }
+
+      &::after {
+        content: "";
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        top: 65%;
+        background-color: $classic_black;
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 10px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 13px;
+    }
   }
 
   &__description {
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
-    color: $Mine_Shaft;
+    color: $mine_shaft;
     text-align: center;
+    margin: 0;
+    max-width: 300px;
+    padding-top: 16px;
 
     &--white-text {
       color: $classic_white;
+      padding-top: 15px;
+
+      @media (min-width: $tablet-width) {
+        padding-top: 24px;
+        width: 197px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 220px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 24px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      br {
+        display: none;
+      }
+    }
+
+    &--width {
+      @media (min-width: $desktop-width) {
+        width: 280px;
+      }
+    }
+
+    br {
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
     }
   }
 
   &--bg-blue {
-    background-color: $Half_Baked;
+    background-color: $half_Baked;
     color: $classic_white;
     flex-direction: column;
 
     @media (min-width: 768px) {
       flex-direction: row;
-      align-items: center;
     }
   }
 
@@ -51,5 +153,75 @@
 
   img {
     flex-grow: 1;
+  }
+
+  &__road {
+    padding-top: 52px;
+    max-width: 205px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 101px;
+      padding-top: 25px;
+      max-width: 130px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 117px;
+      padding-top: 23px;
+      max-width: 269px;
+    }
+  }
+
+  &__square {
+    max-width: 260px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 300px;
+      margin-left: 48px;
+      padding-top: 25px;
+    }
+  }
+
+  &__tourists {
+    padding-top: 53px;
+    max-width: 250px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 116px;
+      padding-top: 26px;
+      max-width: 272px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 21px;
+      padding-top: 26px;
+      max-width: 375px;
+    }
+  }
+
+  &__road,
+  &__tourists {
+    position: relative;
+
+    @media (max-width: $mobile-width-only) {
+      &::before {
+        content: "";
+        width: 277px;
+        height: 1px;
+        position: absolute;
+        top: 15%;
+        background-color: $alto;
+      }
+    }
+  }
+
+  &__picture {
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
   }
 }
