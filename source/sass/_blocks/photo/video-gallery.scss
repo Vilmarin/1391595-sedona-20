@@ -7,15 +7,57 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
+    margin: 0;
+    margin-top: 10px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      margin-top: 57px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 59px;
+    }
   }
 
   &__subtitle {
     font-size: 14px;
     line-height: 24px;
+    margin: 0;
+    text-align: center;
+    margin-top: 28px;
+    width: 270px;
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 33px;
+      width: 450px;
+      margin-bottom: 80px;
+    }
   }
 
   &__video {
     background-color: $concrete;
+    width: 280px;
+    padding-bottom: 19px;
+    margin-bottom: 39px;
+    margin-top: -3px;
+
+    @media (min-width: $tablet-width) {
+      background-color: $classic_black;
+      width: 648px;
+      padding-bottom: 34px;
+      margin-bottom: 44px;
+      margin-top: -96px;
+      opacity: 0.6;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 800px;
+      padding-bottom: 33px;
+      margin-bottom: 89px;
+      margin-top: -97px;
+    }
   }
 
   &__button {
@@ -23,5 +65,54 @@
     outline: none;
     border-style: none;
     font-size: 0;
+    color: $video-mobile-icon;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+      color: $classic_white;
+
+      &:hover,
+      &:focus {
+        color: $mine_shaft;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &--repeat {
+      margin-top: 21px;
+      margin-left: 18px;
+
+      @media (min-width: $tablet-width) {
+        margin-top: 34px;
+        margin-left: 30px;
+      }
+    }
+
+    &--subtitle {
+      margin-left: 118px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 456px;
+      }
+    }
+
+    &--fullscreen {
+      margin-left: 15px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 16px;
+      }
+    }
   }
 }

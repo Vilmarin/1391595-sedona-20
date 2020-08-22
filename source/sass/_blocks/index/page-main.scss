@@ -35,8 +35,35 @@
       max-width: 1200px;
 
       @media (min-width: $tablet-width) {
-        height: 518px;
-        background-image: url("../img/Intro-index.jpg");
+        height: 290px;
+        background-image: url("../img/bg-form.jpg");
+      }
+
+      @media (min-width: $desktop-width) {
+        background-image: url("../img/sedona-form-desktop.jpg");
+      }
+    }
+  }
+
+  &__photo-background {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 157px;
+      background-image: url("../img/sedona-form.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      max-width: 1200px;
+
+      @media (min-width: $tablet-width) {
+        height: 290px;
+        background-image: url("../img/bg-form.jpg");
+      }
+
+      @media (min-width: $desktop-width) {
+        height: 301px;
+        background-image: url("../img/sedona-form-desktop.jpg");
       }
     }
   }

@@ -3,9 +3,11 @@
 *::after {
   box-sizing: border-box;
 }
+
 $half_Baked:#81b3d2;
 $classic_white:#ffffff;
 $classic_black:#000000;
+$classic_black-opacity:rgba(0, 0, 0, 0.3);
 $mine_shaft:#333333;
 $gallery:#eeeeee;
 $concrete:#f2f2f2;
@@ -13,6 +15,10 @@ $blue_button_hover:#669ec0;
 $blue_button_active:#5496bd;
 $alto:#d6d6d6;
 $mercury:#e5e5e5;
+$radio-box-active:#d5d5d5;
+$line-form-tablet:#dbdbdb;
+$photo-bg-color:#eaeaea;
+$video-mobile-icon: #5c6870;
 
 
 @font-face {
@@ -98,3 +104,4 @@ $mobile-width-only: 767px;
 @import "./_blocks/photo/gallery.scss";
 @import "./_blocks/photo/video-gallery.scss";
 @import "./_blocks/form/filter-radio.scss";
+@import "./_blocks/form/filter-checkbox.scss";

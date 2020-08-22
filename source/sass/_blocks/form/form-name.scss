@@ -7,6 +7,7 @@
 
   @media (min-width: $tablet-width) {
     grid-area: fn;
+    align-items: stretch;
   }
 
   &::before {
@@ -16,6 +17,10 @@
     height: 2px;
     background-color: $mercury;
     top: 15px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &__title {
@@ -25,6 +30,19 @@
     line-height: 26px;
     margin-top: 36px;
     margin-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      margin-top: 87px;
+      margin-right: 66px;
+      margin-bottom: 54px;
+      margin-left: 58px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 56px;
+      margin-left: 78px;
+    }
   }
 
   &__input {
@@ -40,6 +58,16 @@
       width: 230px;
       padding-left: 20px;
       margin-left: 10px;
+
+      @media (min-width: $tablet-width) {
+        width: 216px;
+        margin-left: 11px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 350px;
+        margin-left: 9px;
+      }
     }
 
     &--surname {
@@ -47,6 +75,16 @@
       padding-left: 21px;
       margin-left: 10px;
       letter-spacing: -1px;
+
+      @media (min-width: $tablet-width) {
+        width: 178px;
+        margin-left: 12px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 312px;
+        margin-left: 11px;
+      }
     }
 
     &--patronymic {
@@ -54,6 +92,16 @@
       margin-left: 13px;
       padding-left: 20px;
       letter-spacing: -1.5px;
+
+      @media (min-width: $tablet-width) {
+        width: 180px;
+        margin-left: 14px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 314px;
+        margin-left: 13px;
+      }
     }
 
     @include placeholder {
@@ -66,5 +114,14 @@
 
   &__user-name {
     margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+      margin-left: 57px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 80px;
+    }
   }
 }

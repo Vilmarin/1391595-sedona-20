@@ -6,6 +6,21 @@
 
   @media (min-width: $tablet-width) {
     grid-area: fe;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 292px;
+      background-color: #dbdbdb;
+      position: absolute;
+      top: 89px;
+      right: -44px;
+
+      @media (min-width: $desktop-width) {
+        top: 59px;
+        right: -41px;
+      }
+    }
   }
 
   &__title {
@@ -16,6 +31,18 @@
     margin-top: 50px;
     margin-bottom: 35px;
     margin-left: 3px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      margin-top: 87px;
+      margin-bottom: 72px;
+      margin-left: -36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 57px;
+      margin-left: 40px;
+    }
   }
 
   &__list {
@@ -26,10 +53,23 @@
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 176px;
+    }
   }
 
   &__item {
     margin-bottom: 43px;
     margin-left: 57px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+      margin-left: 41px;
+    }
   }
 }

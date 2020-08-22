@@ -27,6 +27,26 @@
         font-size: 30px;
         line-height: 26px;
         text-align: center;
+        margin-top: 61px;
+        margin-bottom: 5px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 124px;
+      }
+    }
+
+    &--photo {
+      margin-top: 34px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 30px;
+        line-height: 26px;
+        margin-top: 62px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 101px;
       }
     }
   }
@@ -41,12 +61,22 @@
     margin: 0;
 
     @media (min-width: $tablet-width) {
-      width: 500px;
+      width: 444px;
       padding-top: 29px;
     }
 
     @media (max-width: $mobile-width-only) {
       padding-top: 31px;
+    }
+
+    &--photo {
+      padding-top: 27px;
+      margin-bottom: 54px;
+
+      @media (min-width: $tablet-width) {
+        padding-top: 34px;
+        margin-bottom: 78px;
+      }
     }
   }
 
