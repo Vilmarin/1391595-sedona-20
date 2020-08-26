@@ -14,6 +14,21 @@
     padding: 40px 0;
     box-shadow: 0 16px 17px -13px $classic_black;
     display: none;
+
+    @media (min-width: $tablet-width) {
+      width: 400px;
+    }
+  }
+
+  &__success {
+    width: 320px;
+    padding-top: 40px;
+    box-shadow: 0 16px 17px -13px $classic_black;
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      width: 640px;
+    }
   }
 
   &__title {
@@ -21,6 +36,23 @@
     width: 224px;
     font-size: 18px;
     margin-left: 64px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 40px;
+      width: 210px;
+      text-align: center;
+      margin-left: 94px;
+    }
+
+    &--success {
+      margin-left: 58px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 94px;
+        width: 451px;
+      }
+    }
   }
 
   &__subtitle {
@@ -31,6 +63,30 @@
     text-align: center;
     margin-top: 25px;
     line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 23px;
+      width: 296px;
+    }
+
+    &--success {
+      margin-top: 26px;
+      margin-bottom: 41px;
+
+      @media (min-width: $tablet-width) {
+        width: 534px;
+        margin-bottom: 47px;
+      }
+    }
+  }
+
+  &__inner {
+    background-color: $concrete;
+    padding: 20px 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 44px 0;
+    }
   }
 
   &__button {
@@ -42,5 +98,23 @@
     margin-top: 35px;
     margin-left: 70px;
     padding: 16px 0;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 26px;
+      margin-left: 64px;
+      width: 272px;
+      font-size: 21px;
+    }
+
+    &--success {
+      margin-top: 0;
+      margin-left: 21px;
+      width: 280px;
+
+      @media (min-width: $tablet-width) {
+        width: 458px;
+        margin-left: 91px;
+      }
+    }
   }
 }
