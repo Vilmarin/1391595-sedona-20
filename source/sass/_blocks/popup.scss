@@ -1,0 +1,46 @@
+.popup {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: $classic_white;
+
+  &__failure {
+    width: 320px;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 40px 0;
+    box-shadow: 0 16px 17px -13px $classic_black;
+    display: none;
+  }
+
+  &__title {
+    margin: 0 auto;
+    width: 224px;
+    font-size: 18px;
+    margin-left: 64px;
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    font-size: 14px;
+    margin-left: 52px;
+    width: 216px;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 24px;
+  }
+
+  &__button {
+    width: 180px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 35px;
+    margin-left: 70px;
+    padding: 16px 0;
+  }
+}

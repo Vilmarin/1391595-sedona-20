@@ -58,6 +58,7 @@
       width: 230px;
       padding-left: 20px;
       margin-left: 10px;
+      font-family: "PT Sans", "Tahoma", sans-serif;
 
       @media (min-width: $tablet-width) {
         width: 216px;
@@ -74,7 +75,7 @@
       width: 192px;
       padding-left: 21px;
       margin-left: 10px;
-      letter-spacing: -1px;
+      font-family: "PT Sans", "Tahoma", sans-serif;
 
       @media (min-width: $tablet-width) {
         width: 178px;
@@ -91,7 +92,7 @@
       width: 194px;
       margin-left: 13px;
       padding-left: 20px;
-      letter-spacing: -1.5px;
+      font-family: "PT Sans", "Tahoma", sans-serif;
 
       @media (min-width: $tablet-width) {
         width: 180px;

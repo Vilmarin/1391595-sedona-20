@@ -17,10 +17,11 @@
   &::before {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 320px;
     height: 2px;
     background-color: $mercury;
     top: 5px;
+    left: -19px;
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -47,13 +48,15 @@
     }
 
     &::before {
-      content: "";
-      height: 1px;
-      width: 123px;
-      background-color: $line-form-tablet;
-      position: absolute;
-      top: 9px;
-      left: 19px;
+      @media (min-width: $tablet-width) {
+        content: "";
+        height: 1px;
+        width: 123px;
+        background-color: $line-form-tablet;
+        position: absolute;
+        top: 9px;
+        left: 19px;
+      }
 
       @media (min-width: $desktop-width) {
         width: 281px;
@@ -63,13 +66,15 @@
     }
 
     &::after {
-      content: "";
-      height: 1px;
-      width: 123px;
-      background-color: $line-form-tablet;
-      position: absolute;
-      top: 9px;
-      right: 19px;
+      @media (min-width: $tablet-width) {
+        content: "";
+        height: 1px;
+        width: 123px;
+        background-color: $line-form-tablet;
+        position: absolute;
+        top: 9px;
+        right: 19px;
+      }
 
       @media (min-width: $desktop-width) {
         width: 281px;
@@ -108,7 +113,7 @@
     padding-top: 20px;
     padding-bottom: 12px;
     padding-left: 21px;
-    letter-spacing: -1.4px;
+    font-family: "PT Sans", "Tahoma", sans-serif;
 
     @media (min-width: $tablet-width) {
       margin-left: 9px;
