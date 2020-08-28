@@ -44,7 +44,7 @@
 
     <div class="page-header__inner">
 
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         Главная
         <picture>
           <source srcset="img/logo-sedona-desktop.svg" media="(min-width:1200px)">
@@ -228,11 +228,40 @@
 
       <p class="filter-form__required-fields">* — обязательные поля</p>
 
+      <div class="popup popup__failure">
+        <h3 class="popup__title">
+          ЧТО-ТО ПОШЛО НЕ ТАК!
+        </h3>
+
+        <p class="popup__subtitle">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </p>
+
+        <button class="button popup__button">
+          ok
+        </button>
+      </div>
+
+      <div class="popup popup__success">
+        <h3 class="popup__title popup__title--success">
+          Ваш отзыв отправлен!</h3>
+        <p class="popup__subtitle popup__subtitle--success">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br>
+          В ближайшее время мы опубликуем его на сайте.
+        </p>
+
+        <div class="popup__inner">
+          <button class="button popup__button popup__button--success">
+            ЗАКРЫТЬ ОКНО
+          </button>
+        </div>
+      </div>
+
     </form>
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer page-footer__padding-b ">
 
     <span class="page-footer__hashtag">
       #visitSedona

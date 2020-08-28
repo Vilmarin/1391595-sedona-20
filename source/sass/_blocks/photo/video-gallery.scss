@@ -105,6 +105,10 @@
       @media (min-width: $tablet-width) {
         margin-left: 456px;
       }
+
+      @media (min-width: $desktop-width) {
+        margin-left: 605px;
+      }
     }
 
     &--fullscreen {

@@ -43,6 +43,20 @@
       margin-top: 57px;
       margin-left: 40px;
     }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 2px;
+      background-color: $mercury;
+      top: 26px;
+      left: -39px;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
   }
 
   &__list {

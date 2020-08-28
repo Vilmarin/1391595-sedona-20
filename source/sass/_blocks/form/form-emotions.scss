@@ -9,13 +9,15 @@
   }
 
   &::before {
-    content: "";
-    position: absolute;
-    width: 123px;
-    height: 1px;
-    background-color: $line-form-tablet;
-    top: 33px;
-    left: 9px;
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: $line-form-tablet;
+      top: 33px;
+      left: 9px;
+    }
 
     @media (min-width: $desktop-width) {
       width: 280px;
@@ -25,13 +27,15 @@
   }
 
   ::after {
-    content: "";
-    position: absolute;
-    width: 123px;
-    height: 1px;
-    background-color: $line-form-tablet;
-    top: 33px;
-    right: 9px;
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: $line-form-tablet;
+      top: 33px;
+      right: 9px;
+    }
 
     @media (min-width: $desktop-width) {
       width: 280px;
@@ -53,6 +57,20 @@
       margin-top: 23px;
       margin-bottom: 55px;
     }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 2px;
+      background-color: $mercury;
+      top: -16px;
+      left: -20px;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
   }
 
   &__input {
@@ -63,8 +81,8 @@
     background-color: $concrete;
     padding-left: 15px;
     padding-top: 12px;
-    letter-spacing: -0.37px;
     padding-right: 10px;
+    font-family: "PT Sans", "Tahoma", sans-serif;
 
 
     @include placeholder {

@@ -8,8 +8,19 @@
   border-style: none;
   width: 280px;
   margin: 0 auto;
+  font-family: "PT Sans", "Tahoma", sans-serif;
 
   @media (min-width: $tablet-width) {
     width: 458px;
+  }
+
+  &:hover,
+  :focus {
+    background-color: $blue_button_hover;
+  }
+
+  &:active {
+    background-color: $blue_button_active;
+    color: rgba(255, 255, 255, 0.3);
   }
 }

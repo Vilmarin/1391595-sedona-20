@@ -30,4 +30,12 @@
       padding-top: 33px;
     }
   }
+
+  &__padding-b {
+    padding-bottom: 22px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 47px;
+    }
+  }
 }
