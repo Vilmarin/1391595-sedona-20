@@ -4,11 +4,9 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 
-  /*   @media (min-width: $desktop-width) {
-    box-shadow: 0 -20px 20px -7px $classic_black;
-  }
- */
+
   &__index-background {
     &::before {
       content: "";
@@ -19,10 +17,36 @@
       background-position: top center;
       background-size: cover;
       max-width: 1200px;
+      z-index: -1;
 
       @media (min-width: $tablet-width) {
         height: 518px;
         background-image: url("../img/Intro-index.jpg");
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 282px;
+      position: absolute;
+      background-image: url("../img/text-index-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      top: 89px;
+      right: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: "";
+        width: 100%;
+        height: 420px;
+        position: absolute;
+        background-image: url("../img/text-index-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 467px 454px;
+        top: 27px;
+        right: 1px;
       }
     }
   }
@@ -37,6 +61,7 @@
       background-position: top center;
       background-size: cover;
       max-width: 1200px;
+      z-index: -1;
 
       @media (min-width: $tablet-width) {
         height: 290px;
@@ -60,6 +85,7 @@
       background-position: top center;
       background-size: cover;
       max-width: 1200px;
+      z-index: -1;
 
       @media (min-width: $tablet-width) {
         height: 290px;

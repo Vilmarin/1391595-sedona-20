@@ -10,17 +10,15 @@
         display: block;
       }
     }
+
+    &:hover + .filter-checkbox__checkbox::before,
+    &:focus + .filter-checkbox__checkbox::before {
+      background-color: $mercury;
+    }
   }
 
   &__checkbox {
     position: relative;
-
-    &:hover,
-    &:focus {
-      &::before {
-        background-color: $mercury;
-      }
-    }
 
     &::before {
       content: "";
