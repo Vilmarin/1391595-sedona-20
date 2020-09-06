@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page">
 
   <header class="page-header page-header__wrapper">
 
@@ -18,15 +18,6 @@
       <a class="page-header__link page-header__link--main-link" href="index.html">
         Главная
       </a>
-
-      <button class="page-header__close-button page-header__close-button--active" type="button">
-        закрыть меню
-        <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
-            fill="white" />
-        </svg>
-      </button>
 
       <a class="page-header__link page-header__link--photo-link" href="photo.html">
         Фото и видео
@@ -42,6 +33,15 @@
         HTML Academy
       </a>
     </nav>
+
+    <button class="page-header__close-button page-header__close-button--active" type="button">
+      закрыть меню
+      <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"
+          fill="white" />
+      </svg>
+    </button>
 
     <div class="page-header__inner">
 
@@ -169,7 +169,7 @@
 
         </li>
 
-        <div class="advantages__wrapper">
+        <ul class="advantages__wrapper">
           <li class="advantages__item advantages-inner advantages-inner__square">
 
             <h3 class="advantages-inner__title">
@@ -216,21 +216,21 @@
             </p>
           </li>
 
-        </div>
+        </ul>
 
       </ul>
 
-      <div class="advantages__interesed interesed">
+      <div class="advantages__interested interested">
 
-        <div class="interesed__inner">
-          <h3 class="interesed__title">
+        <div class="interested__inner">
+          <h3 class="interested__title">
             Заинтересовались?
           </h3>
 
-          <p class="interesed__discription">
+          <p class="interested__discription">
             Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a class="interesed__link button button--active" href="#">
+          <a class="interested__link button button--active" href="#">
             Найти гостиницу
           </a>
         </div>

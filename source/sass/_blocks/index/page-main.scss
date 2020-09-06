@@ -5,10 +5,10 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  @media (min-width: $desktop-width) {
+  /*   @media (min-width: $desktop-width) {
     box-shadow: 0 -20px 20px -7px $classic_black;
   }
-
+ */
   &__index-background {
     &::before {
       content: "";

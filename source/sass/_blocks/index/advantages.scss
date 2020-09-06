@@ -52,16 +52,19 @@
     background-color: $gallery;
     padding-top: 26px;
     padding-bottom: 26px;
+    padding-left: 0;
 
 
     @media (min-width: $tablet-width) {
       flex-direction: row;
       padding-top: 17px;
       padding-bottom: 40px;
+      padding-left: 0;
     }
 
     @media (min-width: $desktop-width) {
       padding-bottom: 61px;
+      padding-left: 0;
     }
   }
 }

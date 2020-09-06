@@ -15,7 +15,8 @@
   &__checkbox {
     position: relative;
 
-    &:hover {
+    &:hover,
+    &:focus {
       &::before {
         background-color: $mercury;
       }
