@@ -14,6 +14,15 @@
     & .page-header {
       &__menu {
         height: 223px;
+
+        @media (min-width: $tablet-width) {
+          height: auto;
+        }
+      }
+
+      &__close-button {
+        display: block;
+        pointer-events: painted;
       }
 
       &__toggle {
@@ -32,6 +41,8 @@
   }
 
   &__close-button {
+    display: none;
+    pointer-events: none;
     position: absolute;
     top: 16px;
     right: 26px;
@@ -60,13 +71,14 @@
   }
 
   &__menu {
-    transition: all 0.5s ease;
+    transition: height 0.5s ease;
     height: 0;
     overflow: hidden;
     flex-direction: column;
     position: relative;
 
     @media (min-width: $tablet-width) {
+      height: auto;
       display: flex;
       flex-direction: row;
       background-color: $classic_white;

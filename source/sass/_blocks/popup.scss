@@ -1,11 +1,14 @@
 .popup {
-  display: block;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   background-color: $classic_white;
+
+  &.active {
+    display: block;
+  }
 
   &__failure {
     width: 320px;
