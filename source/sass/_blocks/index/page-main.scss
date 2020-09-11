@@ -48,6 +48,19 @@
         top: 27px;
         right: 1px;
       }
+
+      @media (min-width: $desktop-width) {
+        content: "";
+        width: 100%;
+        height: 420px;
+        position: absolute;
+        background-image: url("../img/text-index-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 468px 356px;
+        top: 74px;
+        right: 1px;
+      }
     }
   }
 
