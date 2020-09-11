@@ -8,6 +8,5 @@
 *.sublime*
 build/
 node_modules/
-1391595-sedona-20/
 npm-debug.*
 Thumbs.db
