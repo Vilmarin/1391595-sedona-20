@@ -83,7 +83,17 @@
     padding-top: 12px;
     padding-right: 10px;
     font-family: "PT Sans", "Tahoma", sans-serif;
+    resize: none;
+    border-style: none;
 
+    &:hover {
+      background-color: $mercury;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $classic_white;
+    }
 
     @include placeholder {
       color: $classic_black;

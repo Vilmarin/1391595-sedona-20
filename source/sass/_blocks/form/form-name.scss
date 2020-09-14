@@ -1,4 +1,3 @@
-
 .form-name {
   display: flex;
   flex-direction: column;
@@ -54,11 +53,24 @@
     padding-top: 19px;
     padding-bottom: 13px;
 
+    &:hover {
+      background-color: $mercury;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $classic_white;
+    }
+
     &--name {
       width: 230px;
       padding-left: 20px;
       margin-left: 10px;
       font-family: "PT Sans", "Tahoma", sans-serif;
+
+      &:hover {
+        background-color: $mercury;
+      }
 
       @media (min-width: $tablet-width) {
         width: 216px;

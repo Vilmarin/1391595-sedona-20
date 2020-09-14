@@ -72,9 +72,10 @@
     &--photo {
       padding-top: 27px;
       margin-bottom: 54px;
-      width: 436px;
+      width: 276px;
 
       @media (min-width: $tablet-width) {
+        width: 426px;
         padding-top: 34px;
         margin-bottom: 78px;
       }
@@ -85,7 +86,15 @@
     }
 
     &--form {
-      width: 444px;
+      width: 322px;
+
+      @media (min-width: $tablet-width) {
+        width: 443px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 444px;
+      }
     }
   }
 

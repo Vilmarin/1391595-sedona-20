@@ -10,7 +10,6 @@
   }
 
   &__description {
-
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -53,7 +52,6 @@
     padding-top: 26px;
     padding-bottom: 26px;
     padding-left: 0;
-
 
     @media (min-width: $tablet-width) {
       flex-direction: row;

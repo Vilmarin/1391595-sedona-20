@@ -120,7 +120,6 @@
       opacity: 0.3;
     }
 
-
     @media (min-width: $tablet-width) {
       display: none;
     }
@@ -172,7 +171,6 @@
         color: $classic_black;
       }
     }
-
 
     &:last-child {
       @media (max-width: $mobile-width-only) {
