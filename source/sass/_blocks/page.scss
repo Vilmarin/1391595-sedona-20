@@ -2,10 +2,40 @@
   margin: 0 auto;
   max-width: 1280px;
   background-color: $bg-color;
+  position: relative;
 
   &__wrapper {
     @media (min-width: $desktop-width) {
       background-color: $concrete;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 22px;
+      height: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      box-shadow: 8px -1px 20px -9px $classic_black;
+      right: 40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      box-shadow: -8px -1px 20px -9px $classic_black;
+      left: 40px;
     }
   }
 }
