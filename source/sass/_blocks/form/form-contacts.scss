@@ -182,6 +182,15 @@
         }
       }
     }
+
+    &:hover {
+      background-color: $mercury;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $classic_white;
+    }
   }
 
   &__wrapper {

@@ -11,6 +11,15 @@
 
   &__link {
     font-size: 0;
+
+    &:hover {
+      color: $half_Baked;
+    }
+
+    &:active {
+      color: $classic_black;
+      opacity: 0.3;
+    }
   }
 }
 

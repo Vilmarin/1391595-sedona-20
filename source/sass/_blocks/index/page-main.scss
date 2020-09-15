@@ -5,6 +5,9 @@
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  background-color: $classic_white;
+  z-index: 1;
+  box-shadow: 0 -1px 18px -9px $classic_black;
 
   &__index-background {
     &::before {

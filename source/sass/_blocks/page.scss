@@ -1,8 +1,11 @@
 .page {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1280px;
+  background-color: $bg-color;
 
-  @media (min-width: $desktop-width) {
-    box-shadow: 0 0 20px 0 $classic_black;
+  &__wrapper {
+    @media (min-width: $desktop-width) {
+      background-color: $concrete;
+    }
   }
 }
