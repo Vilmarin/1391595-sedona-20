@@ -24,7 +24,7 @@
       position: absolute;
       top: 0;
       height: 100%;
-      box-shadow: 8px -1px 20px -9px $classic_black;
+      box-shadow: 8px 5px 15px rgba(0, 1, 1, 0.2);
       right: 40px;
     }
 
@@ -33,7 +33,7 @@
       position: absolute;
       top: 0;
       height: 100%;
-      box-shadow: -8px -1px 20px -9px $classic_black;
+      box-shadow: -8px 5px 15px rgba(0, 1, 1, 0.2);
       left: 40px;
     }
   }
