@@ -23,6 +23,10 @@
       &__close-button {
         display: block;
         pointer-events: painted;
+
+        @media (min-width: $tablet-width) {
+          display: none;
+        }
       }
 
       &__toggle {
